@@ -5,4 +5,15 @@
         <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
     </style>
 
+    <style name="Widget.App.Chip.Style" parent="Widget.Material3.Chip.Filter">
+        <item name="chipIconTint">@color/material_dynamic_tertiary90</item>
+        <item name="chipBackgroundColor">@color/material_dynamic_tertiary20</item>
+        <item name="android:textColor">@color/material_dynamic_neutral90</item>
+        <item name="chipStrokeWidth">2dp</item>
+        <item name="chipStrokeColor">@color/material_dynamic_tertiary20</item>
+        <item name="checkedIconVisible">false</item>
+        <item name="shapeAppearanceOverlay">@null</item>
+    </style>
+
+
 </resources>
