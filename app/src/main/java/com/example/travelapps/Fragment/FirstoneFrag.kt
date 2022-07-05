@@ -14,11 +14,10 @@ import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
 import com.example.travelapps.Adapter.SliderAdapter
 import com.example.travelapps.Adapter.ViewPagerAdapter
-import com.example.travelapps.Main.InboxActivity
-import com.example.travelapps.Main.Slideritem
-import com.example.travelapps.Main.NotificationActivity
+import com.example.travelapps.Main.*
 import com.example.travelapps.R
 import com.google.android.material.tabs.TabLayout
+import kotlinx.android.synthetic.main.fragment_first.*
 import kotlin.math.abs
 
 
@@ -113,6 +112,11 @@ class firstoneFrag : Fragment() {
             }
         })
 
+        cv_Pesawat.setOnClickListener(View.OnClickListener {
+            val intent = Intent(activity, PemsenanActivity::class.java)
+            startActivity(intent)
+        })
+
 
     }
     private val slideRunnable = Runnable{
@@ -152,6 +156,10 @@ class firstoneFrag : Fragment() {
             }
             R.id.action_inbox -> {
                 val intent = Intent(activity, InboxActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.history -> {
+                val intent = Intent(activity, HistoryActivity::class.java)
                 startActivity(intent)
             }
         }

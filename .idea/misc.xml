@@ -4,20 +4,33 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/akbar/.gradle/caches/transforms-3/afd2062178e942d28fc4c969d850fcee/transformed/material-1.5.0/res/drawable/ic_m3_chip_check.xml" value="0.215" />
+        <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/drawable/dotted.xml" value="0.1985" />
+        <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/drawable/ic_add.xml" value="0.1985" />
+        <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/drawable/ic_baseline_account_box_24.xml" value="0.1985" />
         <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.2335" />
         <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.2335" />
         <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.2335" />
+        <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/drawable/ic_co_present.xml" value="0.1985" />
+        <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/drawable/ic_compare.xml" value="0.1985" />
+        <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/drawable/ic_double_arrow.xml" value="0.2555" />
+        <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/drawable/ic_minus.xml" value="0.1985" />
+        <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/drawable/ic_spinner.xml" value="0.1985" />
         <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/drawable/line.xml" value="0.1" />
         <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/drawable/search.xml" value="0.1005" />
         <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/drawable/shadow_cv_light.xml" value="0.243" />
+        <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/drawable/spinner_background.xml" value="0.1985" />
         <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/font/font.xml" value="0.28020833333333334" />
+        <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/layout/activity_detail.xml" value="0.23324275362318841" />
         <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/layout/activity_detail_list.xml" value="0.2" />
         <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/layout/activity_detail_view.xml" value="0.2" />
+        <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/layout/activity_history.xml" value="0.23324275362318841" />
         <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/layout/activity_inbox.xml" value="0.25" />
+        <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/layout/activity_input_data.xml" value="0.23324275362318841" />
         <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/layout/activity_main.xml" value="0.21784420289855072" />
         <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/layout/activity_notification.xml" value="0.25" />
+        <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/layout/activity_pemsenan.xml" value="0.264" />
         <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/layout/activity_splash_screen.xml" value="0.264" />
-        <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/layout/fragment_first.xml" value="0.41702867072111205" />
+        <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/layout/fragment_first.xml" value="0.3473227206946454" />
         <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/layout/fragment_for_you.xml" value="0.25" />
         <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/layout/fragment_fourth.xml" value="0.25" />
         <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/layout/fragment_kedua.xml" value="0.25" />
@@ -35,6 +48,8 @@
         <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/layout/item_cardview.xml" value="0.264" />
         <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/layout/item_list_view.xml" value="0.264" />
         <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/layout/layout_animation.xml" value="0.25" />
+        <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/layout/list_item.xml" value="0.18671875" />
+        <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/layout/list_item_history.xml" value="0.23324275362318841" />
         <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/layout/main_drawer.xml" value="0.3625" />
         <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/layout/pts.xml" value="0.12158054711246201" />
         <entry key="..\:/Users/akbar/AndroidStudioProjects/TravelApps/app/src/main/res/layout/slide_item_container.xml" value="0.25" />
