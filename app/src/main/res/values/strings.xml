@@ -22,4 +22,5 @@
     <string name="maps">Maps</string>
 
     <string name="mapbox_access_token">pk.eyJ1IjoiYWtiYXJyenFsMDgiLCJhIjoiY2wxOWU5cGV6MTVwdDNkcGZtbmMyYWtzaiJ9.osnC6kXL0m_0S4Z73llj1Q</string>
+    <string name="gallery">Gallery</string>
 </resources>

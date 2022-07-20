@@ -26,7 +26,7 @@
     <fragment
         android:id="@+id/third_fragment"
         android:name="com.example.travelapps.Fragment.thirdFragment"
-        android:label="News"
+        android:label="Gallery"
         tools:layout="@layout/fragment_third">
     </fragment>
 

@@ -13,39 +13,57 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-    <!-- Media -->
-    <ImageView
-        android:id="@+id/img_item_photo1"
-        android:layout_width="match_parent"
-        android:layout_height="194dp"
-        android:scaleType="centerCrop"
-        />
+        <!-- Media -->
+        <ImageView
+            android:id="@+id/img_Unsplash"
+            android:layout_width="match_parent"
+            android:layout_height="194dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/gradient"
+            />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-    <!-- Title, secondary and supporting text -->
-    <TextView
-        android:id="@+id/tv_item_name1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nama Berita"
-        android:textAppearance="?attr/textAppearanceHeadline6"
-        />
-    <TextView
-        android:id="@+id/tv_item_detail1"
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
-        android:layout_marginTop="8dp"
-        android:text="Deksripsi Berita"
-        android:textAppearance="?attr/textAppearanceBody2"
-        android:textColor="?android:attr/textColorSecondary"
-        />
+            <!-- Title, secondary and supporting text -->
+            <TextView
+                android:id="@+id/alt_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="alt DESC"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                />
 
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/iv_Username"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_launcher_background"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_Username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="UserName"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:textColor="@color/DarkBlue"
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
     </LinearLayout>
 
 

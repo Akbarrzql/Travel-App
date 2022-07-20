@@ -14,7 +14,7 @@
 
     <item
         android:id="@+id/third_fragment"
-        android:title="@string/news"
-        android:contentDescription="@string/news"
-        android:icon="@drawable/news"/>
+        android:title="@string/gallery"
+        android:contentDescription="@string/gallery"
+        android:icon="@drawable/ic_baseline_dashboard_24"/>
 </menu>
