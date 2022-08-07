@@ -1,9 +1,14 @@
 package com.example.travelapps.Fragment
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.os.Handler
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.style.ForegroundColorSpan
 import android.view.*
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
@@ -13,7 +18,6 @@ import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
 import com.example.travelapps.Adapter.SliderAdapter
-import com.example.travelapps.Adapter.ViewPagerAdapter
 import com.example.travelapps.Main.*
 import com.example.travelapps.R
 import com.google.android.material.tabs.TabLayout
@@ -75,42 +79,8 @@ class firstoneFrag : Fragment() {
             }
         })
 
-        // creating object of tabs and viewpager
-        pager = view.findViewById(R.id.viewPager)
-        tab = view.findViewById(R.id.tabs)
-
         (activity as AppCompatActivity).supportActionBar
 
-        // Initializing the ViewPagerAdapter
-        val adapter = ViewPagerAdapter(parentFragmentManager)
-
-        // add fragment to the list
-        adapter.addFragment(ForYouFragment(), "Untuk Kamu")
-        adapter.addFragment(RekomendasiFragment(), "Rekomendasi")
-        adapter.addFragment(PopularFragment(), "Populer")
-
-
-        // Adding the Adapter to the ViewPager
-        pager.adapter = adapter
-
-        // bind the viewPager with the TabLayout.
-        tab.setupWithViewPager(pager)
-
-        // set the icon for the tab.
-
-        tab.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
-            override fun onTabSelected(tab: TabLayout.Tab) {
-
-            }
-
-            override fun onTabUnselected(tab: TabLayout.Tab) {
-
-            }
-
-            override fun onTabReselected(tab: TabLayout.Tab) {
-
-            }
-        })
 
         cv_Pesawat.setOnClickListener(View.OnClickListener {
             val intent = Intent(activity, PemsenanActivity::class.java)

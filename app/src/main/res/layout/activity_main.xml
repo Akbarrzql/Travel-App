@@ -44,6 +44,4 @@
         app:textColor="@color/white"
         app:textSize="14sp" />
 
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

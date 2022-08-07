@@ -1,5 +1,7 @@
 package com.example.travelapps.Adapter
 
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.travelapps.R
 import com.example.travelapps.Retrofit.ResultsItem
-
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 
 class UnsplashAdapter(val dataUnsplash: List<ResultsItem?>?): RecyclerView.Adapter<UnsplashAdapter.MyViewHolder>() {
@@ -40,8 +42,19 @@ class UnsplashAdapter(val dataUnsplash: List<ResultsItem?>?): RecyclerView.Adapt
             .into(holder.imgUsername)
 
         holder.itemView.setOnClickListener {
-            val name = dataUnsplash?.get(position)?.user?.username
-            Toast.makeText(holder.itemView.context, "Clicked on $name", Toast.LENGTH_SHORT).show()
+            // Download and open Image form url Api Unsplash
+            MaterialAlertDialogBuilder(holder.itemView.context)
+                .setTitle("Download Gambar")
+                .setMessage("Kamu ingin mendownload gambar ini?")
+                .setPositiveButton("Download") { dialog, which ->
+                    val intent = Intent(Intent.ACTION_VIEW)
+                    intent.data = Uri.parse(dataUnsplash?.get(position)?.urls?.regular)
+                    holder.itemView.context.startActivity(intent)
+                }
+                .setNegativeButton("Tidak") { dialog, which ->
+                    Toast.makeText(holder.itemView.context, "Membatalkan", Toast.LENGTH_SHORT).show()
+                }
+                .show()
         }
 
     }

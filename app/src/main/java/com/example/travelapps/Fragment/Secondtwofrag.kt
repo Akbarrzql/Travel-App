@@ -3,6 +3,8 @@ package com.example.travelapps.Fragment
 import android.os.Bundle
 import android.view.*
 import android.widget.SearchView
+import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -12,6 +14,8 @@ import com.example.travelapps.Data.DestinasiData
 import com.example.travelapps.R
 import kotlinx.android.synthetic.main.fragment_second.*
 import kotlinx.android.synthetic.main.fragment_second.view.*
+import java.util.*
+import kotlin.collections.ArrayList
 
 
 class secondtwofrag : Fragment() {
@@ -71,7 +75,7 @@ class secondtwofrag : Fragment() {
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.menu_one, menu)
-        val item = menu?.findItem(R.id.search)
+        val item = menu.findItem(R.id.search)
         val searchView = item?.actionView as SearchView
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String): Boolean {
@@ -81,7 +85,7 @@ class secondtwofrag : Fragment() {
             override fun onQueryTextChange(newText: String): Boolean {
                 val newList = ArrayList<Destinasi>()
                 for (destinasi in list) {
-                    if (destinasi.name.toLowerCase().contains(newText.toLowerCase())) {
+                    if (destinasi.name.toLowerCase(Locale.ROOT).contains(newText.toLowerCase(Locale.ROOT))) {
                         newList.add(destinasi)
                     }
                 }

@@ -9,10 +9,14 @@
     <color name="white">#FFFFFFFF</color>
 
     //color
-    <color name="DarkBlue">#2D3652</color>
+    <color name="Red">#C9233B</color>
+    <color name="textgrey">#858383</color>
+    <color name="hintText">#858383</color>
     <color name="Darkmode">#36373B</color>
     <color name="light_blue_600">#FF039BE5</color>
     <color name="light_blue_900">#FF01579B</color>
     <color name="light_blue_A200">#FF40C4FF</color>
     <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="Background_Apps">#031F2A</color>
+    <color name="CardView_Background">#0A2834</color>
 </resources>

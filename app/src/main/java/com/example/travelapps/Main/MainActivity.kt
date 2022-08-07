@@ -35,14 +35,7 @@ class MainActivity : AppCompatActivity() {
         navController = findNavController(R.id.main_fragment)
         setupActionBarWithNavController(navController)
         setupSmoothBottomMenu()
-        getSupportActionBar()?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT));
-
-//        (this as AppCompatActivity).setSupportActionBar(topAppBar)
-////        setSupportActionBar(topAppBar)
-//        val toogle = ActionBarDrawerToggle(this, drawerLayout, topAppBar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
-//        drawerLayout.addDrawerListener(toogle)
-//        toogle.syncState()
-
+        reportFullyDrawn()
     }
 
     override fun onBackPressed() {

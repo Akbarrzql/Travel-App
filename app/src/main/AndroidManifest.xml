@@ -12,8 +12,14 @@
         android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.TravelApps">
+        android:theme="@style/Theme.TravelApps"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
         <activity
             android:name=".Main.HistoryActivity"
             android:exported="false" />

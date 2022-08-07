@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Travel Apps</string>
+    <string name="app_name">TravelCro</string>
     <string name="home">Home</string>
     <string name="blog">Blog</string>
     <!-- TODO: Remove or change this placeholder text -->
@@ -23,4 +23,7 @@
 
     <string name="mapbox_access_token">pk.eyJ1IjoiYWtiYXJyenFsMDgiLCJhIjoiY2wxOWU5cGV6MTVwdDNkcGZtbmMyYWtzaiJ9.osnC6kXL0m_0S4Z73llj1Q</string>
     <string name="gallery">Gallery</string>
+    <string name="decs_splash">Discover great experiences around you and make you live interesting!</string>
+    <string name="title_splashscreen">Escape the ordinary life</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
 </resources>
