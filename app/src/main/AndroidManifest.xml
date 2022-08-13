@@ -15,12 +15,6 @@
         android:theme="@style/Theme.TravelApps"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".RegisterActivity"
-            android:exported="false" />
-        <activity
-            android:name=".LoginActivity"
-            android:exported="false" />
-        <activity
             android:name=".Main.HistoryActivity"
             android:exported="false" />
         <activity
@@ -33,6 +27,18 @@
             android:name=".Main.InboxActivity"
             android:exported="false" />
         <activity
+            android:name=".Detail.DetailView"
+            android:parentActivityName=".Detail.DetailView" />
+        <activity
+            android:name=".Main.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Main.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Main.RegisterActivity"
+            android:exported="false" />
+        <activity
             android:name=".Main.Splash_Screen_Activity"
             android:exported="true">
             <intent-filter>
@@ -41,15 +47,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Detail.DetailNews"
-            android:parentActivityName=".Detail.DetailNews" />
-        <activity
-            android:name=".Detail.DetailView"
-            android:parentActivityName=".Detail.DetailView" />
-        <activity
-            android:name=".Main.MainActivity"
-            android:exported="true" />
     </application>
 
 </manifest>

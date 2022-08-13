@@ -26,7 +26,7 @@
         android:id="@+id/bottomBar"
         android:layout_width="match_parent"
         android:layout_height="90dp"
-        app:backgroundColor="@color/DarkBlue"
+        app:backgroundColor="@color/Red"
         app:cornerRadius="10dp"
         app:corners="top_left|top_right"
         app:iconSize="24dp"
@@ -41,7 +41,6 @@
         app:layout_constraintTop_toBottomOf="@+id/main_fragment"
         app:menu="@menu/menu"
         app:sideMargins="20dp"
-        app:textColor="@color/white"
         app:textSize="14sp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

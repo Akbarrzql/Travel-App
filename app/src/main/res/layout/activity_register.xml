@@ -6,4 +6,165 @@
     android:layout_height="match_parent"
     tools:context=".Main.RegisterActivity">
 
+    <View
+        android:id="@+id/image_login"
+        android:layout_width="502dp"
+        android:layout_height="301dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="-58dp"
+        android:layout_marginTop="-80dp"
+        android:background="@drawable/registermobil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="200dp"
+        app:cardCornerRadius="20sp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daftar Akun"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:textColor="@color/Red"
+            android:fontFamily="@font/montserrat_bold"
+            android:textStyle="bold"
+            android:textSize="30sp"/>
+
+
+        <EditText
+            android:id="@+id/et_name_daftar"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/bg_button_one"
+            android:hint="Nama Depan"
+            android:padding="10dp"
+            android:textColor="@color/textgrey" />
+
+        <EditText
+            android:id="@+id/et_name_belakang_daftar"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/bg_button_one"
+            android:hint="Nama Belakang"
+            android:padding="10dp"
+            android:textColor="@color/textgrey" />
+
+        <EditText
+            android:id="@+id/et_email_daftar"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:hint="Masukan Email"
+            android:background="@drawable/bg_button"
+            android:padding="10dp"
+            android:textColor="@color/textgrey"
+            android:layout_marginTop="140dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <EditText
+            android:id="@+id/et_password_daftar"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:hint="Masukan Password"
+            android:background="@drawable/bg_button"
+            android:padding="10dp"
+            android:textColor="@color/textgrey"
+            android:layout_marginTop="200dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="172dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="255dp"
+            android:onClick="onClicklupaPassword"
+            android:text="Lupa Kata Sandimu ?"
+            android:textColor="@color/Red"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_daftar"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="275dp"
+            android:text="Masuk"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textAlignment="viewStart"
+            android:drawableRight="@drawable/ic_baseline_arrow_forward_24"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Atau gunakan akun"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textColor="@color/textgrey"
+            android:layout_marginTop="335dp"/>
+
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="370dp"
+            android:background="@drawable/button_bg_trp"
+            android:src="@drawable/google" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="200dp"
+            android:src="@drawable/twitter"
+            android:background="@drawable/button_bg_trp"
+            android:layout_marginTop="370dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sudah punya akun?"
+            android:textColor="@color/textgrey"
+            android:textStyle="bold"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="500dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Masuk Akun"
+            android:textColor="@color/Red"
+            android:textStyle="bold"
+            android:onClick="onClickMasuk"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="500dp"/>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="150dp"
+            android:progressDrawable="@raw/progressworldlocations"
+            android:visibility="gone"/>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

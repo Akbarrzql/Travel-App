@@ -34,7 +34,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
-                        android:background="@color/DarkBlue"
+                        android:background="@color/Red"
                         android:orientation="horizontal">
 
                         <ImageView
@@ -76,7 +76,7 @@
                             android:id="@+id/fistLastName"
                             android:layout_width="match_parent"
                             android:layout_height="50dp"
-                            android:backgroundTint="@color/DarkBlue"
+                            android:backgroundTint="@color/Red"
                             android:hint="Masukan nama lengkap"
                             android:imeOptions="actionNext"
                             android:inputType="text"
@@ -114,6 +114,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="30dp"
+                                android:backgroundTint="@color/Red"
                                 android:inputType="text" />
 
 
@@ -126,7 +127,7 @@
                             android:layout_gravity="center"
                             android:layout_marginTop="14dp"
                             android:src="@drawable/ic_compare"
-                            app:tint="@color/DarkBlue" />
+                            app:tint="@color/Red" />
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -142,13 +143,13 @@
                                 android:textColor="@color/black"
                                 android:textSize="14sp" />
 
-                                <AutoCompleteTextView
-                                    android:id="@+id/Tujuan"
-                                    android:layout_marginTop="30dp"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:inputType="text"
-                                    />
+                            <AutoCompleteTextView
+                                android:id="@+id/Tujuan"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="30dp"
+                                android:backgroundTint="@color/Red"
+                                android:inputType="text" />
 
 
                         </RelativeLayout>
@@ -177,6 +178,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="30dp"
+                            android:backgroundTint="@color/Red"
                             android:hint="Masukan tipe kelas"
                             android:inputType="text" />
 
@@ -209,6 +211,7 @@
                                 android:id="@+id/inputTanggal"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:backgroundTint="@color/Red"
                                 android:inputType="date"
                                 />
 
@@ -236,7 +239,7 @@
                             android:id="@+id/inputTelepon"
                             android:layout_width="match_parent"
                             android:layout_height="50dp"
-                            android:backgroundTint="@color/DarkBlue"
+                            android:backgroundTint="@color/Red"
                             android:hint="Masukan nomor telepon"
                             android:imeOptions="actionDone"
                             android:inputType="number"
@@ -262,10 +265,10 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:theme="@style/Theme.MaterialComponents"
-                app:backgroundTint="@color/DarkBlue"
+                app:backgroundTint="@color/Red"
                 app:cornerRadius="50dp"
                 app:elevation="5dp"
-                app:rippleColor="@color/DarkBlue" />
+                app:rippleColor="@color/Red" />
 
         </LinearLayout>
 

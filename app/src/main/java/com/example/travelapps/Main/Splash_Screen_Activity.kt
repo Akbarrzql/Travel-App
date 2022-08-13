@@ -15,21 +15,21 @@ class Splash_Screen_Activity : AppCompatActivity() {
 
         imageView.alpha = 0f
         imageView.animate().setDuration(4000).alpha(1f).withEndAction {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
             finish()
         }
         textView2.alpha = 0f
         textView2.animate().setDuration(3000).alpha(1f).withEndAction {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
             finish()
         }
         textView3.alpha = 0f
         textView3.animate().setDuration(3000).alpha(1f).withEndAction {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
             finish()
