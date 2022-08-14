@@ -38,26 +38,16 @@
 
 
         <EditText
-            android:id="@+id/et_name_daftar"
-            android:layout_width="140dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
+            android:id="@+id/et_nama"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="80dp"
-            android:background="@drawable/bg_button_one"
-            android:hint="Nama Depan"
+            android:background="@drawable/bg_button"
+            android:hint="Masukan Nama"
             android:padding="10dp"
             android:textColor="@color/textgrey" />
 
-        <EditText
-            android:id="@+id/et_name_belakang_daftar"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="180dp"
-            android:layout_marginTop="80dp"
-            android:background="@drawable/bg_button_one"
-            android:hint="Nama Belakang"
-            android:padding="10dp"
-            android:textColor="@color/textgrey" />
 
         <EditText
             android:id="@+id/et_email_daftar"
@@ -152,12 +142,13 @@
             android:layout_marginLeft="200dp"
             android:layout_marginTop="500dp"/>
 
-        <ProgressBar
+        <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/progress_bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="150dp"
+            app:lottie_autoPlay="true"
             android:progressDrawable="@raw/progressworldlocations"
             android:visibility="gone"/>
 

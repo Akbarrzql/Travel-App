@@ -7,15 +7,16 @@ import android.view.View
 import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.travelapps.Fragment.FourthFragment
+import androidx.fragment.app.Fragment
 import com.example.travelapps.R
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_register.*
+import kotlinx.android.synthetic.main.fragment_fourth.*
 
 class RegisterActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
-    private lateinit var progressBar: ProgressBar
+    private lateinit var progressBar: View
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,14 +29,12 @@ class RegisterActivity : AppCompatActivity() {
 
 
         btn_daftar.setOnClickListener {
-            val namaDepan = et_name_daftar.text.toString()
-            val namaBelakang = et_name_belakang_daftar.text.toString()
+            val nama = et_nama.text.toString()
             val email = et_email_daftar.text.toString()
             val password = et_password_daftar.text.toString()
 
-            if (email.isEmpty() || password.isEmpty() || namaDepan.isEmpty() || namaBelakang.isEmpty()) {
-                et_name_daftar.error = "nama tidak boleh kosong"
-                et_name_belakang_daftar.error = "nama tidak boleh kosong"
+            if (email.isEmpty() || password.isEmpty() || nama.isEmpty()) {
+                et_nama.error = "nama tidak boleh kosong"
                 et_email_daftar.error = "Email tidak boleh kosong"
                 et_password_daftar.error = "Password tidak boleh kosong"
 
@@ -55,11 +54,13 @@ class RegisterActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
             progressBar.visibility = ProgressBar.VISIBLE
-            registerUser(email, password, namaDepan, namaBelakang)
+            //get email from edit text
+
+            registerUser(email, password, nama,)
         }
     }
 
-    private fun registerUser(email: String, password: String, namaDepan: String, namaBelakang: String) {
+    private fun registerUser(email: String, password: String, nama: String,) {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
@@ -69,6 +70,12 @@ class RegisterActivity : AppCompatActivity() {
                             if (task.isSuccessful) {
                                 Intent(this, MainActivity::class.java).also {
                                     it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+//                                    //bundel untuk mengirim data ke activity lain
+//                                    val fragment = Fragment()
+//                                    val bundle = Bundle()
+//                                    bundle.putString("nama", nama)
+//                                    fragment.arguments = bundle
+//                                    it.putExtras(bundle)
                                     startActivity(it)
                                 }
                             }
