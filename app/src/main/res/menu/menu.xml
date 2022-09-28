@@ -2,19 +2,25 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/first_fragment"
-        android:title="@string/home"
-        android:contentDescription="@string/home"
+        android:title=""
+        android:contentDescription=""
         android:icon="@drawable/home"/>
 
     <item
         android:id="@+id/second_fragment"
-        android:title="@string/blog"
-        android:contentDescription="@string/blog"
+        android:title=""
+        android:contentDescription=""
         android:icon="@drawable/book"/>
 
     <item
         android:id="@+id/third_fragment"
-        android:title="@string/gallery"
-        android:contentDescription="@string/gallery"
+        android:title=""
+        android:contentDescription=""
         android:icon="@drawable/ic_baseline_dashboard_24"/>
+
+    <item
+        android:id="@+id/fourthFragment"
+        android:title=""
+        android:contentDescription=""
+        android:icon="@drawable/ic_baseline_person_24"/>
 </menu>

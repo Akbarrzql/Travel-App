@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.TravelApps" parent="Theme.Material3.Light.NoActionBar">
+    <style name="Theme.TravelApps" parent="Theme.Material3.Light">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/Red</item>
         <item name="colorPrimaryVariant">@color/Red</item>
@@ -18,6 +18,12 @@
         <item name="fullscreenBackgroundColor">@color/light_blue_600</item>
         <item name="fullscreenTextColor">@color/light_blue_A200</item>
     </style>
+    <style name="Theme.TravelApps.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.TravelApps.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.TravelApps.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 
 </resources>

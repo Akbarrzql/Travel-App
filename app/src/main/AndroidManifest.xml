@@ -3,6 +3,7 @@
     package="com.example.travelapps">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission." />
 
     <application
         android:allowBackup="true"
@@ -15,11 +16,10 @@
         android:theme="@style/Theme.TravelApps"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".RegisterActivity"
-            android:exported="false" />
-        <activity
-            android:name=".LoginActivity"
-            android:exported="false" />
+            android:name=".Main.LoginRegister.ResetPasswordActivity"
+            android:exported="false"
+            android:label="@string/title_activity_reset_password"
+            android:theme="@style/Theme.TravelApps.NoActionBar" />
         <activity
             android:name=".Main.HistoryActivity"
             android:exported="false" />
@@ -33,6 +33,18 @@
             android:name=".Main.InboxActivity"
             android:exported="false" />
         <activity
+            android:name=".Detail.DetailView"
+            android:parentActivityName=".Main.MainActivity" />
+        <activity
+            android:name=".Main.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Main.LoginRegister.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Main.LoginRegister.RegisterActivity"
+            android:exported="false" />
+        <activity
             android:name=".Main.Splash_Screen_Activity"
             android:exported="true">
             <intent-filter>
@@ -41,15 +53,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Detail.DetailNews"
-            android:parentActivityName=".Detail.DetailNews" />
-        <activity
-            android:name=".Detail.DetailView"
-            android:parentActivityName=".Detail.DetailView" />
-        <activity
-            android:name=".Main.MainActivity"
-            android:exported="true" />
     </application>
 
 </manifest>

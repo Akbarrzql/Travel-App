@@ -4,9 +4,149 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Main.LoginActivity"
+    tools:context=".Main.LoginRegister.LoginActivity"
     android:orientation="vertical"
     android:background="@color/white">
+
+    <View
+        android:id="@+id/image_login"
+        android:layout_width="502dp"
+        android:layout_height="301dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="-58dp"
+        android:background="@drawable/image_login"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="200dp"
+        app:cardCornerRadius="20sp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Masuk Akun"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:textColor="@color/Red"
+            android:fontFamily="@font/montserrat_bold"
+            android:textStyle="bold"
+            android:textSize="30sp"/>
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:hint="Masukan Email"
+            android:background="@drawable/bg_button"
+            android:padding="10dp"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/textgrey"
+            android:layout_marginTop="100dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:hint="Masukan Password"
+            android:background="@drawable/bg_button"
+            android:padding="10dp"
+            android:textColor="@color/textgrey"
+            android:layout_marginTop="170dp"
+            android:inputType="textPassword"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/lupa_password"
+            android:layout_width="172dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="225dp"
+            android:text="Lupa Kata Sandi ?"
+            android:textColor="@color/Red"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+        
+        <Button
+            android:id="@+id/btn_masuk"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="250dp"
+            android:text="Masuk"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textAlignment="viewStart"
+            android:drawableRight="@drawable/ic_baseline_arrow_forward_24"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Atau gunakan akun"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textColor="@color/textgrey"
+            android:layout_marginTop="315dp"/>
+
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="50dp"
+            android:src="@drawable/google"
+            android:background="@drawable/button_bg_trp"
+            android:layout_marginTop="350dp"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="200dp"
+            android:src="@drawable/twitter"
+            android:background="@drawable/button_bg_trp"
+            android:layout_marginTop="350dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Belum punya akun?"
+            android:textColor="@color/textgrey"
+            android:textStyle="bold"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="500dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buat Akun Yuk!"
+            android:textColor="@color/Red"
+            android:textStyle="bold"
+            android:onClick="onClikDaftar"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="500dp"/>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/progress_bar_login"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="150dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/progressworldlocations"
+            android:visibility="gone"/>
+
+
+
+
+    </androidx.cardview.widget.CardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
