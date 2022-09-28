@@ -16,6 +16,11 @@
         android:theme="@style/Theme.TravelApps"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".Main.LoginRegister.ResetPasswordActivity"
+            android:exported="false"
+            android:label="@string/title_activity_reset_password"
+            android:theme="@style/Theme.TravelApps.NoActionBar" />
+        <activity
             android:name=".Main.HistoryActivity"
             android:exported="false" />
         <activity
@@ -29,15 +34,15 @@
             android:exported="false" />
         <activity
             android:name=".Detail.DetailView"
-            android:parentActivityName=".Detail.DetailView" />
+            android:parentActivityName=".Main.MainActivity" />
         <activity
             android:name=".Main.MainActivity"
             android:exported="true" />
         <activity
-            android:name=".Main.LoginActivity"
+            android:name=".Main.LoginRegister.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".Main.RegisterActivity"
+            android:name=".Main.LoginRegister.RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".Main.Splash_Screen_Activity"

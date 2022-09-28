@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Main.LoginActivity"
+    tools:context=".Main.LoginRegister.LoginActivity"
     android:orientation="vertical"
     android:background="@color/white">
 
@@ -44,6 +44,7 @@
             android:hint="Masukan Email"
             android:background="@drawable/bg_button"
             android:padding="10dp"
+            android:inputType="textEmailAddress"
             android:textColor="@color/textgrey"
             android:layout_marginTop="100dp"
             android:layout_gravity="center_horizontal"/>
@@ -57,15 +58,16 @@
             android:padding="10dp"
             android:textColor="@color/textgrey"
             android:layout_marginTop="170dp"
+            android:inputType="textPassword"
             android:layout_gravity="center_horizontal"/>
 
         <TextView
+            android:id="@+id/lupa_password"
             android:layout_width="172dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="180dp"
+            android:layout_marginLeft="200dp"
             android:layout_marginTop="225dp"
-            android:onClick="onClicklupaPassword"
-            android:text="Lupa Kata Sandimu ?"
+            android:text="Lupa Kata Sandi ?"
             android:textColor="@color/Red"
             android:textSize="15sp"
             android:textStyle="bold" />

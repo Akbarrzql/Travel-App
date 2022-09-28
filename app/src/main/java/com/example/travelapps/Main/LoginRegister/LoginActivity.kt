@@ -1,12 +1,14 @@
-package com.example.travelapps.Main
+package com.example.travelapps.Main.LoginRegister
 
 import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
 import android.view.View
 import android.widget.ProgressBar
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.travelapps.Main.MainActivity
 import com.example.travelapps.R
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
@@ -15,6 +17,7 @@ class LoginActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
     private lateinit var progressBar: View
+    private lateinit var tv_lupaPassword : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,8 +28,20 @@ class LoginActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
         progressBar = findViewById(R.id.progress_bar_login)
+        tv_lupaPassword = findViewById(R.id.lupa_password)
         progressBar.visibility = ProgressBar.GONE
 
+        buttonMasuk()
+
+        tv_lupaPassword.setOnClickListener {
+            Intent(this@LoginActivity, ResetPasswordActivity::class.java).also {
+                startActivity(it)
+            }
+        }
+
+    }
+
+    private fun buttonMasuk(){
         btn_masuk.setOnClickListener {
             val emailMasuk = et_email.text.toString()
             val passwordMasuk = et_password.text.toString()
@@ -46,9 +61,8 @@ class LoginActivity : AppCompatActivity() {
                 et_password.requestFocus()
                 return@setOnClickListener
             }
-
-            loginUser(emailMasuk, passwordMasuk)
             progressBar.visibility = ProgressBar.VISIBLE
+            loginUser(emailMasuk, passwordMasuk)
         }
     }
 
@@ -62,6 +76,7 @@ class LoginActivity : AppCompatActivity() {
                     }
                 } else {
                     Toast.makeText(this, "${task.exception}", Toast.LENGTH_SHORT).show()
+                    progressBar.visibility = ProgressBar.GONE
                 }
             }
     }
@@ -74,9 +89,6 @@ class LoginActivity : AppCompatActivity() {
                 startActivity(it)
             }
         }
-    }
-
-    fun onClicklupaPassword(view: View) {
     }
 
     fun onClikDaftar(view: View) {

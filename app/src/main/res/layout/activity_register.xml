@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Main.RegisterActivity">
+    tools:context=".Main.LoginRegister.RegisterActivity">
 
     <View
         android:id="@+id/image_login"
@@ -54,6 +54,7 @@
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:hint="Masukan Email"
+            android:inputType="textEmailAddress"
             android:background="@drawable/bg_button"
             android:padding="10dp"
             android:textColor="@color/textgrey"
@@ -65,22 +66,12 @@
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:hint="Masukan Password"
+            android:inputType="textPassword"
             android:background="@drawable/bg_button"
             android:padding="10dp"
             android:textColor="@color/textgrey"
             android:layout_marginTop="200dp"
             android:layout_gravity="center_horizontal"/>
-
-        <TextView
-            android:layout_width="172dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="180dp"
-            android:layout_marginTop="255dp"
-            android:onClick="onClicklupaPassword"
-            android:text="Lupa Kata Sandimu ?"
-            android:textColor="@color/Red"
-            android:textSize="15sp"
-            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btn_daftar"
@@ -144,13 +135,15 @@
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/progress_bar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="150dp"
             app:lottie_autoPlay="true"
-            android:progressDrawable="@raw/progressworldlocations"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/progressworldlocations"
             android:visibility="gone"/>
+
 
 
 

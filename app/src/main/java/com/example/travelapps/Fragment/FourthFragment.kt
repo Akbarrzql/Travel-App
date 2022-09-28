@@ -1,28 +1,25 @@
 package com.example.travelapps.Fragment
 
 import android.app.Activity.RESULT_OK
-import android.app.ProgressDialog
 import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
-import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.fragment.app.Fragment
-import com.example.travelapps.Main.LoginActivity
+import androidx.navigation.Navigation
+import com.example.travelapps.Main.LoginRegister.LoginActivity
 import com.example.travelapps.R
 import com.example.travelapps.databinding.FragmentFourthBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.storage.FirebaseStorage
 import com.squareup.picasso.Picasso
-import de.hdodenhof.circleimageview.CircleImageView
 import kotlinx.android.synthetic.main.fragment_fourth.*
 import java.io.ByteArrayOutputStream
-import java.net.URI
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -41,6 +38,7 @@ class FourthFragment : Fragment() {
     private lateinit var imageProfile: ImageView
     private lateinit var verified: ImageView
     private lateinit var unverified: ImageView
+    private lateinit var changePassword: TextView
     private lateinit var binding: FragmentFourthBinding
 
     companion object{
@@ -65,11 +63,12 @@ class FourthFragment : Fragment() {
         tvemail = view.findViewById(R.id.emailtv)
         etnamePerson = view.findViewById(R.id.etName)
         etphonePerson = view.findViewById(R.id.etPhone)
-        etemailPerson = view.findViewById(R.id.etEmail)
+        etemailPerson = view.findViewById(R.id.etEmailProfile)
         imageProfile = view.findViewById(R.id.ivProfile)
         verified = view.findViewById(R.id.icVerified)
         unverified = view.findViewById(R.id.icUnverified)
         tvemail.text = auth.currentUser?.email.toString()
+        changePassword = view.findViewById(R.id.ChangePassword)
 
         val user = auth.currentUser
 
@@ -146,6 +145,17 @@ class FourthFragment : Fragment() {
                 startActivity(it)
             }
         }
+
+        etemailPerson.setOnClickListener {
+            val actionUpdateEmail = FourthFragmentDirections.actionUpdateEmail()
+            Navigation.findNavController(it).navigate(actionUpdateEmail)
+        }
+
+        changePassword.setOnClickListener {
+            val  actionChangePassword = FourthFragmentDirections.actionChangePassword()
+            Navigation.findNavController(it).navigate(actionChangePassword)
+        }
+
         return view
     }
 
@@ -163,6 +173,8 @@ class FourthFragment : Fragment() {
             imageProfile.setImageURI(imageUri)
         }
     }
+
+
 
     private fun uploadImage(imageBitmap: Bitmap) {
         val baos = ByteArrayOutputStream()

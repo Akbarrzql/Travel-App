@@ -1,4 +1,4 @@
-package com.example.travelapps.Main
+package com.example.travelapps.Main.LoginRegister
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,16 +7,15 @@ import android.view.View
 import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
+import com.example.travelapps.Main.MainActivity
 import com.example.travelapps.R
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_register.*
-import kotlinx.android.synthetic.main.fragment_fourth.*
 
 class RegisterActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
-    private lateinit var progressBar: View
+    private lateinit var progressBarRegister: View
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,10 +23,13 @@ class RegisterActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         auth = FirebaseAuth.getInstance()
-        progressBar = findViewById(R.id.progress_bar)
-        progressBar.visibility = ProgressBar.GONE
+        progressBarRegister = findViewById(R.id.progress_bar)
+        progressBarRegister.visibility = ProgressBar.GONE
 
+        buttonRegister()
+    }
 
+    private fun buttonRegister(){
         btn_daftar.setOnClickListener {
             val nama = et_nama.text.toString()
             val email = et_email_daftar.text.toString()
@@ -53,10 +55,9 @@ class RegisterActivity : AppCompatActivity() {
                 et_password_daftar.requestFocus()
                 return@setOnClickListener
             }
-            progressBar.visibility = ProgressBar.VISIBLE
             //get email from edit text
-
             registerUser(email, password, nama,)
+            progressBarRegister.visibility = ProgressBar.VISIBLE
         }
     }
 
@@ -70,26 +71,17 @@ class RegisterActivity : AppCompatActivity() {
                             if (task.isSuccessful) {
                                 Intent(this, MainActivity::class.java).also {
                                     it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-//                                    //bundel untuk mengirim data ke activity lain
-//                                    val fragment = Fragment()
-//                                    val bundle = Bundle()
-//                                    bundle.putString("nama", nama)
-//                                    fragment.arguments = bundle
-//                                    it.putExtras(bundle)
                                     startActivity(it)
                                 }
                             }
                         }
                 } else {
-                    Toast.makeText(
-                        baseContext, "Autenfikaasi Gagal",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    Toast.makeText(baseContext, "Autenfikaasi Gagal", Toast.LENGTH_SHORT).show()
+                    progressBarRegister.visibility = ProgressBar.GONE
                 }
             }
     }
 
-    fun onClicklupaPassword(view: View) {}
     fun onClickMasuk(view: View) {
         startActivity(Intent(this, LoginActivity::class.java))
         finish()

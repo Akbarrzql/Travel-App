@@ -51,13 +51,13 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/etEmail"
+                android:id="@+id/etEmailProfile"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="32dp"
                 android:ems="10"
-                android:enabled="false"
+                android:focusableInTouchMode="false"
                 android:inputType="textEmailAddress"
                 app:layout_constraintEnd_toEndOf="@+id/etName"
                 app:layout_constraintStart_toStartOf="@+id/etName"
@@ -69,23 +69,36 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:ems="10"
-                android:enabled="false"
+                android:focusableInTouchMode="false"
                 android:inputType="phone"
                 app:layout_constraintEnd_toEndOf="@+id/etName"
                 app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="@+id/etEmail"
-                app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+                app:layout_constraintStart_toStartOf="@+id/etEmailProfile"
+                app:layout_constraintTop_toBottomOf="@+id/etEmailProfile" />
+
+            <TextView
+                android:id="@+id/ChangePassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Ganti Password"
+                android:textColor="@color/Red"
+                android:textSize="13dp"
+                app:layout_constraintBottom_toTopOf="@+id/btn_keluar"
+                app:layout_constraintEnd_toEndOf="@+id/etPhone"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/etPhone" />
 
             <ImageView
                 android:id="@+id/icVerified"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_baseline_verified_user_24"
-                app:layout_constraintBottom_toBottomOf="@+id/etEmail"
+                app:layout_constraintBottom_toBottomOf="@+id/etEmailProfile"
                 android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="@+id/etName"
-                app:layout_constraintStart_toEndOf="@+id/etEmail"
-                app:layout_constraintTop_toTopOf="@+id/etEmail" />
+                app:layout_constraintStart_toEndOf="@+id/etEmailProfile"
+                app:layout_constraintTop_toTopOf="@+id/etEmailProfile" />
 
             <ImageView
                 android:id="@+id/icUnverified"
@@ -93,20 +106,20 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_baseline_verified_user"
                 android:visibility="invisible"
-                app:layout_constraintBottom_toBottomOf="@+id/etEmail"
+                app:layout_constraintBottom_toBottomOf="@+id/etEmailProfile"
                 app:layout_constraintEnd_toEndOf="@+id/etName"
-                app:layout_constraintStart_toEndOf="@+id/etEmail"
-                app:layout_constraintTop_toTopOf="@+id/etEmail" />
+                app:layout_constraintStart_toEndOf="@+id/etEmailProfile"
+                app:layout_constraintTop_toTopOf="@+id/etEmailProfile" />
 
             <Button
                 android:id="@+id/btnUpdate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="36dp"
                 android:text="Simpan"
                 android:textColor="#FFFFFF"
                 app:layout_constraintEnd_toEndOf="@+id/etPhone"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="0.173"
                 app:layout_constraintStart_toStartOf="@+id/etPhone"
                 app:layout_constraintTop_toBottomOf="@+id/etPhone" />
 
@@ -115,8 +128,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginStart="60dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="36dp"
                 android:text="Keluar"
                 android:textColor="@color/white"
                 app:layout_constraintStart_toEndOf="@+id/btnUpdate"

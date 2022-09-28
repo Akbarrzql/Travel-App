@@ -3,6 +3,7 @@ package com.example.travelapps.Main
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.travelapps.Main.LoginRegister.LoginActivity
 import com.example.travelapps.R
 import kotlinx.android.synthetic.main.activity_splash_screen.*
 

@@ -36,6 +36,35 @@
         android:id="@+id/fourthFragment"
         android:name="com.example.travelapps.Fragment.FourthFragment"
         android:label="Profile"
-        tools:layout="@layout/fragment_fourth" />
+        tools:layout="@layout/fragment_fourth" >
+        <action
+            android:id="@+id/actionUpdateEmail"
+            app:destination="@id/updateEmailFragment" />
+        <action
+            android:id="@+id/actionChangePassword"
+            app:destination="@id/changePasswordFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateEmailFragment"
+        android:name="com.example.travelapps.Main.LoginRegister.UpdateEmailFragment"
+        android:label="Update Email"
+        tools:layout="@layout/fragment_update_email" >
+        <action
+            android:id="@+id/actionEmailUpdated"
+            app:destination="@id/fourthFragment"
+            app:popUpTo="@id/fourthFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/changePasswordFragment2"
+        android:name="com.example.travelapps.Main.LoginRegister.ChangePasswordFragment"
+        android:label="Ganti Password"
+        tools:layout="@layout/fragment_change_password" >
+        <action
+            android:id="@+id/actionChangedPassword"
+            app:destination="@id/fourthFragment"
+            app:popUpTo="@id/fourthFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
 
 </navigation>

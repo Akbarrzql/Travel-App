@@ -30,9 +30,6 @@ class firstoneFrag : Fragment() {
     private lateinit var viewPager2: ViewPager2
     private val slideHandler = Handler()
 
-    private lateinit var pager: ViewPager // creating object of ViewPager
-    private lateinit var tab: TabLayout  // creating object of TabLayout
-    private lateinit var bar: Toolbar    // creating object of ToolBar
 
 
     override fun onCreateView(
